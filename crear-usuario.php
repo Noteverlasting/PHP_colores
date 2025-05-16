@@ -25,9 +25,9 @@ require_once 'pdo_bind_connection.php';
 </head>
 <body>
     <main>
-        <form action="insert_user.php" method="post">
+    <form action="insert_user.php" method="post">
             <fieldset>
-            <h1>Crear cuenta</h1>
+            <h2>Crear cuenta</h2>
         <div>
             <label for="usuario">Nombre:</label>
             <input type="text" name="usuario" id="usuario">
@@ -69,7 +69,7 @@ require_once 'pdo_bind_connection.php';
         <a href="index.php"> Volver</a>
 
         </fieldset>
-        </form>
+    </form>
     </main>
 </body>
 </html>

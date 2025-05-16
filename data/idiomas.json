@@ -1,0 +1,18 @@
+
+
+{
+    "es" : {
+        "lang" : "es",
+        "title" : "Favicolores, tu app de colores"
+    },
+
+    "en" : {
+        "lang" : "en",
+        "title" : "Favicolors, your color app"
+    },
+
+    "ca" : {
+        "lang" : "ca",
+        "title" : "Favicolors, la teva app de colors"
+    }
+}

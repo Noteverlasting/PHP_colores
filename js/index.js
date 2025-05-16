@@ -8,6 +8,8 @@ var idioma = navigator.language || navigator.userLanguage || "es";
 const formIdioma = document.forms["form-idioma"];
 
 
+// ESTA SOLUCION FUNCIONA, PERO NO ES LA MEJOR YA QUE EL FETCH SE REALIZA CADA VEZ QUE SE CAMBIA EL IDIOMA, LO QUE PUEDE SER UN PROBLEMA DE RENDIMIENTO
+
 // CREAR EL LISTENER
 formIdioma.addEventListener("change", () => {
     // OBTENER EL IDIOMA SELECCIONADO

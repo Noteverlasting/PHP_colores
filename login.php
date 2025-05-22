@@ -59,9 +59,29 @@ if (!password_verify($password, $usuarioExistente['password'])) {
     exit();
 }
 
+//22/05 COOKIES. VAMOS A CREAR UNA COOKIE PARA TOMAR EL NOMBRE DEL USUARIO
+// Hay dos sintaxis para crearlas 
+// 1. COOKIE BASICA. setcookie("CLAVE", "VALOR", "TIEMPO", "VALIDEZ"); 
+// time() es el tiempo actual, y el resto se añade en segundos
+// "/" indica que esa cookie tiene raiz en toda la web
+
+setcookie("usuario", $usuarioExistente['usuario'], time() + 60, "/"); 
+
+//2. COOKIE DETALLADA. AHORA MISMO NO LA USAREMOS PORQUE NO TENEMOS HTTPS.
+// setcookie(
+//     "usuario", 
+//     $usuarioExistente['usuario'], [
+//         "expires" => time() + 60,
+//         "httponly" => true,     // Solo se puede acceder a la cookie desde el protocolo HTTP (lado del servidor) javascript no la lee.
+//         "secure" => true,       // Solo se puede enviar por https
+//         "path" => "/",          // Indica la ruta raiz de la cookie (ahora es accesible desde cualquier ruta del proyecto)
+//         "samesite" => "Strict"  // Disponer de la cookie solo desde el mismo origen (barra de navegacion) lo contrario es "Lax" (acceder desde links)
+//     ]);
+
+
 // echo "Todo OK!";
 // 13-05 -> Guardamos el idUsuario en la sesion para usarlo en la pagina colores/index.php
 $_SESSION['idUsuario'] = $usuarioExistente['idUsuario'];
 $_SESSION['usuario'] = $usuarioExistente['usuario'];
 // 13-05 -> Redirigimos a la pagina colores/index.php ya que estamos juntando las conexiones en pdo_bind_connection.php
-header('Location: colores/index.php');
+header('Location: colores/indexcopy.php');

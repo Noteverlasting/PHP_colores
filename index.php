@@ -40,7 +40,7 @@ echo $idioma;
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <?php include_once 'etiquetasMeta.php'; ?> 
+    <?php include_once 'modulos/etiquetasMeta.php'; ?> 
     <title>Favicolores, tu app de colores</title>
     <link rel="stylesheet" href="css/login.css">
 </head>
@@ -70,6 +70,9 @@ echo $idioma;
                 break;
             case 'reset':
                 include_once 'modulos/form_reset.php';
+                break;
+            case 'revisar':
+                include_once 'modulos/revisarCorreo.php';
                 break;
             default:
                 include_once 'modulos/form_login.php';

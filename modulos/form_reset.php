@@ -1,6 +1,6 @@
 <form action="reset_password.php" method="post">
                 <fieldset>
-                    <h2>Iniciar sesion</h2>
+                    <h2>Reestablecer contraseña</h2>
                     <div>
                         <label for="usuario">Introduce tu user o email:</label>
                         <input type="text" name="usuario" id="usuario" minlength="4" maxlength="15">

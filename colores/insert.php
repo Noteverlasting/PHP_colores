@@ -21,7 +21,7 @@ session_start();
 // SEGURIDAD PHP -- y ademas se redirige al usuario a la página de inicio.
 if (!isset($_SESSION['sessionToken'])) {
     $_SESSION['errorSesion'] = true;
-    header('location:index.php');
+    header('location:indexcopy.php');
 }
 
 
@@ -63,7 +63,7 @@ $color = $arrayColors[$color] ?? $color;
 
 // SEGURIDAD PHP -- if para considerar varias opciones erroneas, le indicamos que si se dan vuelva a index.php y finalice el formulario
 if (empty($user) || empty($color)){
-    header("location: index.php");
+    header("location: indexcopy.php");
     exit();
 }
 
@@ -83,7 +83,7 @@ $insertPrepare = null;
 $conn = null;
 
 //VOLVEMOS A LA PAGINA DE ORIGEN
-header("location: index.php");
+header("location: indexcopy.php");
 
 
 

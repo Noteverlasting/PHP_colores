@@ -1,6 +1,14 @@
 
 // PRIMERO VAMOS A DEFINIR UNA VARIABLE GLOBAL QUE CONTENDRÁ EL IDIOMA POR DEFECTO DEL NAVEGADOR O EN SU DEFECTO EL IDIOMA ESPAÑOL
-var idioma = navigator.language || navigator.userLanguage || "es"; 
+
+function getAllCookies() {
+    return Object.fromEntries(
+        document.cookie.split('; ').map(cookie => cookie.split('='))
+    );
+}
+
+const cookies = getAllCookies();
+var idioma = cookies.language || navigator.language || "es"; 
 
 
 
@@ -20,7 +28,7 @@ formIdioma.addEventListener("change", () => {
     console.log(jsonIdiomas[idioma]['title']);
 });
 
-function cambiarIdioma(idioma) {
+
     jsonIdiomas = ""
     fetch ("data/idiomas.json")
     // CON .then SE OBTIENE LA RESPUESTA, LA TRANSFORMA EN JSON Y SE MANDA A LA CONSOLA
@@ -36,5 +44,5 @@ function cambiarIdioma(idioma) {
     console.error("Error:", error);
 });
 
-}
+
 

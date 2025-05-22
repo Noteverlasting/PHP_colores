@@ -73,7 +73,7 @@ $pdo = null;
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<?php include_once '../etiquetasMeta.php'; ?>
+<?php include_once '../modulos/etiquetasMeta.php'; ?>
     <title>Colores</title>
 
     <link rel="stylesheet" href="../css/login.css">

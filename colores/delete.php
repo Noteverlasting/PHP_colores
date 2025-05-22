@@ -12,4 +12,4 @@ $deletePrepare -> execute([$_GET['id']]);
 $deletePrepare = null;
 $conn = null;
 
-header("location: index.php");
+header("location: indexcopy.php");

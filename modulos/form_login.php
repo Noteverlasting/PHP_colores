@@ -1,6 +1,6 @@
 <form action="login.php" method="post">
                 <fieldset>
-                    <h1>Iniciar sesion</h1>
+                    <h2>Iniciar sesion</h2>
                     <div>
                         <label for="usuario">Nombre:</label>
                         <input type="text" name="usuario" id="usuario" minlength="4" maxlength="15">

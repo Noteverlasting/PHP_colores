@@ -3,13 +3,8 @@
     <div>
         <h1>Favicolores, tu app de colores</h1>
         <div>
-            <?php if (isset($_COOKIE['usuario'])) : ?>
-                <span>¡Hola <?= $_COOKIE['usuario'] ?>!</span>
-            <?php else : ?>
-                <span>Por favor, inicia sesión</span>
-            <?php endif; ?>    
             <?php if (isset($_SESSION['usuario'])) : ?>
-            <!-- <span>¡Hola < ?= $_SESSION['usuario'] ?>!</span> -->
+            <span>¡Hola <?= $_SESSION['usuario'] ?>!</span>
             <form action="../logout.php" method="post">
                 <button id="btnLogout" type="submit"><i class="fa-solid fa-door-open"></i></button>
             </form>

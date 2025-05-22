@@ -11,4 +11,4 @@ $updatePrepare -> execute([$arrayColors[$_POST['color']], $_POST['usuario'], $_P
 
 $updatePrepare = null;
 $conn = null;
-header("location: index.php");
+header("location: indexcopy.php");
